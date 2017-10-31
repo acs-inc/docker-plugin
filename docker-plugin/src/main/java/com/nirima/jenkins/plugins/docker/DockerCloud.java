@@ -368,7 +368,8 @@ public class DockerCloud extends Cloud {
 
     }
 
-    private DockerSlave provisionFromTemplate(DockerTemplate template, TaskListener listener) throws IOException, Descriptor.FormException, InterruptedException {
+    @Restricted(NoExternalUse.class)
+    public DockerSlave provisionFromTemplate(DockerTemplate template, TaskListener listener) throws IOException, Descriptor.FormException, InterruptedException {
 
         final DockerClient client = getClient();
         final DockerComputerConnector connector = template.getConnector();

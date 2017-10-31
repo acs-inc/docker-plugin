@@ -19,6 +19,7 @@ import hudson.slaves.JNLPLauncher;
 import hudson.slaves.SlaveComputer;
 import jenkins.model.Jenkins;
 import org.apache.commons.lang.StringUtils;
+import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.DataBoundSetter;
 
@@ -130,7 +131,7 @@ public class DockerComputerJNLPConnector extends DockerComputerConnector {
     }
 
 
-    @Extension
+    @Extension @Symbol("jnlp")
     public static final class DescriptorImpl extends Descriptor<DockerComputerConnector> {
 
         @Override

@@ -1,0 +1,19 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:c="/lib/credentials">
+
+  <f:entry title="Docker Cloud" field="cloudName">
+    <f:select/>
+  </f:entry>
+
+  <f:property title="Docker Agent template" field="template"/>
+
+  <f:entry title="Agent root directory" field="remoteFs">
+    <f:textbox/>
+  </f:entry>
+
+  <!--
+  <f:dropdownDescriptorSelector field="connector" descriptors="${DockerFunctions.dockerComputerConnectorDescriptors}"/>
+  -->
+
+
+</j:jelly>
